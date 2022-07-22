@@ -1,1 +1,0 @@
-['Activity_result_8.png', 'Updated_plan_result_8.gif', 'Utilization_result_8.png']
