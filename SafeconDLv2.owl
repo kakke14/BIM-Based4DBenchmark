@@ -1,0 +1,347 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/au516160/ontologies/2022/7/untitled-ontology-12#"
+     xml:base="http://www.semanticweb.org/au516160/ontologies/2022/7/untitled-ontology-12"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.safecon.com/safeconDL/V2/"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.safecon.com/safeconDL/V2/#activated_changed_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.safecon.com/safeconDL/V2/#activated_changed_by">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.safecon.com/safeconDL/V2/#IfcProductRepresentation"/>
+        <rdfs:domain rdf:resource="http://www.safecon.com/safeconDL/V2/#IfcTask"/>
+        <rdfs:range rdf:resource="http://www.safecon.com/safeconDL/V2/#spatial_artefact"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.safecon.com/safeconDL/V2/#creates_a -->
+
+    <owl:ObjectProperty rdf:about="http://www.safecon.com/safeconDL/V2/#creates_a">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.safecon.com/safeconDL/V2/#Hazard_space"/>
+        <rdfs:range rdf:resource="http://www.safecon.com/safeconDL/V2/#Fall_space"/>
+        <rdfs:range rdf:resource="http://www.safecon.com/safeconDL/V2/#Functional_space"/>
+        <rdfs:range rdf:resource="http://www.safecon.com/safeconDL/V2/#Movement_space"/>
+        <rdfs:range rdf:resource="http://www.safecon.com/safeconDL/V2/#Range_space"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.safecon.com/safeconDL/V2/#defined_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.safecon.com/safeconDL/V2/#defined_by">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.safecon.com/safeconDL/V2/#Safety_regulation"/>
+        <rdfs:range rdf:resource="http://www.safecon.com/safeconDL/V2/#Mitigation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.safecon.com/safeconDL/V2/#effected_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.safecon.com/safeconDL/V2/#effected_by">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.safecon.com/safeconDL/V2/#Safety_regulation"/>
+        <rdfs:range rdf:resource="http://www.safecon.com/safeconDL/V2/#spatial_artefact"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.safecon.com/safeconDL/V2/#has_a -->
+
+    <owl:ObjectProperty rdf:about="http://www.safecon.com/safeconDL/V2/#has_a">
+        <rdfs:domain rdf:resource="http://www.safecon.com/safeconDL/V2/#Mitigation_equipment"/>
+        <rdfs:domain rdf:resource="http://www.safecon.com/safeconDL/V2/#Mitigation_task"/>
+        <rdfs:range rdf:resource="http://www.safecon.com/safeconDL/V2/#Mitigation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.safecon.com/safeconDL/V2/#proposes_a -->
+
+    <owl:ObjectProperty rdf:about="http://www.safecon.com/safeconDL/V2/#proposes_a">
+        <rdfs:domain rdf:resource="http://www.safecon.com/safeconDL/V2/#Mitigation"/>
+        <rdfs:range rdf:resource="http://www.safecon.com/safeconDL/V2/#Hazard_space"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.safecon.com/safeconDL/V2/#Blind_spot_space -->
+
+    <owl:Class rdf:about="http://www.safecon.com/safeconDL/V2/#Blind_spot_space">
+        <rdfs:subClassOf rdf:resource="http://www.safecon.com/safeconDL/V2/#Range_space"/>
+        <rdfs:comment>Regions in which an agent has no visible contact with an object.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.safecon.com/safeconDL/V2/#Crawlable_space -->
+
+    <owl:Class rdf:about="http://www.safecon.com/safeconDL/V2/#Crawlable_space">
+        <rdfs:subClassOf rdf:resource="http://www.safecon.com/safeconDL/V2/#Movement_space"/>
+        <rdfs:comment>Regions in which an agent can travel crawling.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.safecon.com/safeconDL/V2/#Fall_from_height -->
+
+    <owl:Class rdf:about="http://www.safecon.com/safeconDL/V2/#Fall_from_height">
+        <rdfs:subClassOf rdf:resource="http://www.safecon.com/safeconDL/V2/#Hazard_space"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.safecon.com/safeconDL/V2/#Fall_space -->
+
+    <owl:Class rdf:about="http://www.safecon.com/safeconDL/V2/#Fall_space">
+        <rdfs:subClassOf rdf:resource="http://www.safecon.com/safeconDL/V2/#spatial_artefact"/>
+        <rdfs:comment>Regions in which an object or agent will fall by f_d</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.safecon.com/safeconDL/V2/#Falling_object_space -->
+
+    <owl:Class rdf:about="http://www.safecon.com/safeconDL/V2/#Falling_object_space">
+        <rdfs:subClassOf rdf:resource="http://www.safecon.com/safeconDL/V2/#Struck_by"/>
+        <rdfs:comment>Regions in which agent is subject to struck-by an object falling from above hazard</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.safecon.com/safeconDL/V2/#Functional_space -->
+
+    <owl:Class rdf:about="http://www.safecon.com/safeconDL/V2/#Functional_space">
+        <rdfs:subClassOf rdf:resource="http://www.safecon.com/safeconDL/V2/#spatial_artefact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.safecon.com/safeconDL/V2/#Hazard_space -->
+
+    <owl:Class rdf:about="http://www.safecon.com/safeconDL/V2/#Hazard_space">
+        <rdfs:subClassOf rdf:resource="http://www.safecon.com/safeconDL/V2/#spatial_artefact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.safecon.com/safeconDL/V2/#IfcBuildingElement -->
+
+    <owl:Class rdf:about="http://www.safecon.com/safeconDL/V2/#IfcBuildingElement">
+        <rdfs:subClassOf rdf:resource="http://www.safecon.com/safeconDL/V2/#IfcProduct"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.safecon.com/safeconDL/V2/#IfcProduct -->
+
+    <owl:Class rdf:about="http://www.safecon.com/safeconDL/V2/#IfcProduct">
+        <rdfs:subClassOf rdf:resource="http://www.safecon.com/safeconDL/V2/#IfcSchema"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.safecon.com/safeconDL/V2/#IfcProductRepresentation -->
+
+    <owl:Class rdf:about="http://www.safecon.com/safeconDL/V2/#IfcProductRepresentation">
+        <rdfs:subClassOf rdf:resource="http://www.safecon.com/safeconDL/V2/#IfcSchema"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.safecon.com/safeconDL/V2/#IfcSchema -->
+
+    <owl:Class rdf:about="http://www.safecon.com/safeconDL/V2/#IfcSchema"/>
+    
+
+
+    <!-- http://www.safecon.com/safeconDL/V2/#IfcTask -->
+
+    <owl:Class rdf:about="http://www.safecon.com/safeconDL/V2/#IfcTask">
+        <rdfs:subClassOf rdf:resource="http://www.safecon.com/safeconDL/V2/#IfcSchema"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.safecon.com/safeconDL/V2/#Item_drop_space -->
+
+    <owl:Class rdf:about="http://www.safecon.com/safeconDL/V2/#Item_drop_space">
+        <rdfs:subClassOf rdf:resource="http://www.safecon.com/safeconDL/V2/#Range_space"/>
+        <rdfs:comment>Regions in which an object would drop.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.safecon.com/safeconDL/V2/#Leading_edge_space -->
+
+    <owl:Class rdf:about="http://www.safecon.com/safeconDL/V2/#Leading_edge_space">
+        <rdfs:subClassOf rdf:resource="http://www.safecon.com/safeconDL/V2/#Fall_from_height"/>
+        <rdfs:comment>Regions where the movement space in its full height intersects with a fall space</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.safecon.com/safeconDL/V2/#Mitigation -->
+
+    <owl:Class rdf:about="http://www.safecon.com/safeconDL/V2/#Mitigation"/>
+    
+
+
+    <!-- http://www.safecon.com/safeconDL/V2/#Mitigation_equipment -->
+
+    <owl:Class rdf:about="http://www.safecon.com/safeconDL/V2/#Mitigation_equipment">
+        <rdfs:subClassOf rdf:resource="http://www.safecon.com/safeconDL/V2/#Mitigation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.safecon.com/safeconDL/V2/#Mitigation_task -->
+
+    <owl:Class rdf:about="http://www.safecon.com/safeconDL/V2/#Mitigation_task">
+        <rdfs:subClassOf rdf:resource="http://www.safecon.com/safeconDL/V2/#Mitigation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.safecon.com/safeconDL/V2/#Movement_space -->
+
+    <owl:Class rdf:about="http://www.safecon.com/safeconDL/V2/#Movement_space">
+        <rdfs:subClassOf rdf:resource="http://www.safecon.com/safeconDL/V2/#spatial_artefact"/>
+        <rdfs:comment>Regions in which an agent (e.g., construction worker, manager, and visitor) can travel.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.safecon.com/safeconDL/V2/#Offset_leading_edge_space -->
+
+    <owl:Class rdf:about="http://www.safecon.com/safeconDL/V2/#Offset_leading_edge_space">
+        <rdfs:subClassOf rdf:resource="http://www.safecon.com/safeconDL/V2/#Fall_from_height"/>
+        <rdfs:comment>Regions where a portion of the movement space intersects with a fall space</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.safecon.com/safeconDL/V2/#Offset_top_leading_edge_space -->
+
+    <owl:Class rdf:about="http://www.safecon.com/safeconDL/V2/#Offset_top_leading_edge_space">
+        <rdfs:subClassOf rdf:resource="http://www.safecon.com/safeconDL/V2/#Fall_from_height"/>
+        <rdfs:comment>Regions where a portion of the movement space intersects with a fall space</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.safecon.com/safeconDL/V2/#Operatable_space -->
+
+    <owl:Class rdf:about="http://www.safecon.com/safeconDL/V2/#Operatable_space">
+        <rdfs:subClassOf rdf:resource="http://www.safecon.com/safeconDL/V2/#Functional_space"/>
+        <rdfs:comment>Regions in which an agent or piece of equipment can operate.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.safecon.com/safeconDL/V2/#Operation_space -->
+
+    <owl:Class rdf:about="http://www.safecon.com/safeconDL/V2/#Operation_space">
+        <rdfs:subClassOf rdf:resource="http://www.safecon.com/safeconDL/V2/#Functional_space"/>
+        <rdfs:comment>Regions in which a construction element, item, or device is considered worked on or controlled.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.safecon.com/safeconDL/V2/#Range_space -->
+
+    <owl:Class rdf:about="http://www.safecon.com/safeconDL/V2/#Range_space">
+        <rdfs:subClassOf rdf:resource="http://www.safecon.com/safeconDL/V2/#spatial_artefact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.safecon.com/safeconDL/V2/#Safety_regulation -->
+
+    <owl:Class rdf:about="http://www.safecon.com/safeconDL/V2/#Safety_regulation"/>
+    
+
+
+    <!-- http://www.safecon.com/safeconDL/V2/#Struck_by -->
+
+    <owl:Class rdf:about="http://www.safecon.com/safeconDL/V2/#Struck_by">
+        <rdfs:subClassOf rdf:resource="http://www.safecon.com/safeconDL/V2/#Hazard_space"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.safecon.com/safeconDL/V2/#Tumbling_space -->
+
+    <owl:Class rdf:about="http://www.safecon.com/safeconDL/V2/#Tumbling_space">
+        <rdfs:subClassOf rdf:resource="http://www.safecon.com/safeconDL/V2/#Fall_from_height"/>
+        <rdfs:comment>Regions in which an agent can tumble over fall prevention equipment on lower surface</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.safecon.com/safeconDL/V2/#Visibility_space -->
+
+    <owl:Class rdf:about="http://www.safecon.com/safeconDL/V2/#Visibility_space">
+        <rdfs:subClassOf rdf:resource="http://www.safecon.com/safeconDL/V2/#Range_space"/>
+        <rdfs:comment>Regions in which an agent has visible contact with the object.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.safecon.com/safeconDL/V2/#Walkable_space -->
+
+    <owl:Class rdf:about="http://www.safecon.com/safeconDL/V2/#Walkable_space">
+        <rdfs:subClassOf rdf:resource="http://www.safecon.com/safeconDL/V2/#Movement_space"/>
+        <rdfs:comment>Regions in which an agent can travel upright</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.safecon.com/safeconDL/V2/#Work_space -->
+
+    <owl:Class rdf:about="http://www.safecon.com/safeconDL/V2/#Work_space">
+        <rdfs:subClassOf rdf:resource="http://www.safecon.com/safeconDL/V2/#Functional_space"/>
+        <rdfs:comment>Regions which an agent or piece are expected to occupy while performing task.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.safecon.com/safeconDL/V2/#spatial_artefact -->
+
+    <owl:Class rdf:about="http://www.safecon.com/safeconDL/V2/#spatial_artefact"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
