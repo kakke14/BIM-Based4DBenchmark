@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.semanticweb.org/au516160/ontologies/2022/7/untitled-ontology-12#"
-     xml:base="http://www.semanticweb.org/au516160/ontologies/2022/7/untitled-ontology-12"
+<rdf:RDF xmlns="http://www.safecon.com/safeconDL/V2/"
+     xml:base="http://www.safecon.com/safeconDL/V2/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
